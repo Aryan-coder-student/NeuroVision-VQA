@@ -1,0 +1,10 @@
+finetune_model:
+  best: models/best-saved-model
+  last: models/last-saved-model
+  orignal_model_id: Salesforce/blip-vqa-base
+data_location:
+  data: data/bronze/flaviagiammarino___vqa-rad
+  train_processed_data: data/silver/train_dataset.pkl
+  test_processed_data: data/silver/test_dataset.pkl
+
+result: results

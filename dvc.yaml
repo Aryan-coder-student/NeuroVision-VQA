@@ -1,0 +1,27 @@
+stages:
+  preprocess:
+    cmd: python src/preprocess_data.py
+    deps:
+      - src/preprocess_data.py
+      - data/bronze/downloads  
+    outs:
+      - data/silver  
+
+  train:
+    cmd: python src/train.py
+    deps:
+      - src/train.py
+      - data/silver 
+      - param.yaml
+    outs:
+      - models 
+
+
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+      - src/evaluate.py
+      - models  
+      - data/silver
+    outs:
+      - results  

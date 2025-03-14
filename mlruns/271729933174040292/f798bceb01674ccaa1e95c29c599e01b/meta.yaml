@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/My%20File/Project/MedHelp-Brain-VQA/End-To-End-Pipline/VQA/mlruns/271729933174040292/f798bceb01674ccaa1e95c29c599e01b/artifacts
+end_time: 1738649240316
+entry_point_name: ''
+experiment_id: '271729933174040292'
+lifecycle_stage: active
+run_id: f798bceb01674ccaa1e95c29c599e01b
+run_name: sassy-ant-5
+run_uuid: f798bceb01674ccaa1e95c29c599e01b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738645599352
+status: 4
+tags: []
+user_id: VIT

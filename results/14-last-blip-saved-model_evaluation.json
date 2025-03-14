@@ -1,0 +1,5 @@
+{
+    "model_path": "models/14-last-blip-saved-model",
+    "avg_bleu": 0.05889530477414862,
+    "corpus_bleu": 0.000788282690784758
+}

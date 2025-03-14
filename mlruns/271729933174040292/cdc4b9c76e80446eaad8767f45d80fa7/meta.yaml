@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/My%20File/Project/MedHelp-Brain-VQA/End-To-End-Pipline/VQA/mlruns/271729933174040292/cdc4b9c76e80446eaad8767f45d80fa7/artifacts
+end_time: 1738476719836
+entry_point_name: ''
+experiment_id: '271729933174040292'
+lifecycle_stage: active
+run_id: cdc4b9c76e80446eaad8767f45d80fa7
+run_name: defiant-rat-229
+run_uuid: cdc4b9c76e80446eaad8767f45d80fa7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738476705929
+status: 4
+tags: []
+user_id: ASUS

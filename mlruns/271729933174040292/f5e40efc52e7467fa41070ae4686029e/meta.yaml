@@ -1,0 +1,15 @@
+artifact_uri: file:///D:/My%20File/Project/MedHelp-Brain-VQA/End-To-End-Pipline/VQA/mlruns/271729933174040292/f5e40efc52e7467fa41070ae4686029e/artifacts
+end_time: 1738910822628
+entry_point_name: ''
+experiment_id: '271729933174040292'
+lifecycle_stage: active
+run_id: f5e40efc52e7467fa41070ae4686029e
+run_name: zealous-goose-495
+run_uuid: f5e40efc52e7467fa41070ae4686029e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738904840038
+status: 4
+tags: []
+user_id: VIT
