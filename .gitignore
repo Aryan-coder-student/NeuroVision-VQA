@@ -1,4 +1,3 @@
-Deployment/Model/14-last-blip-saved-model
 models/best-saved-model
 models/last-saved-model
 Deployment/.env
