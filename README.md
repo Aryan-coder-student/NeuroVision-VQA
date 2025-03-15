@@ -1,5 +1,9 @@
 # 🔍 Visual Question Answering (VQA) Model
-
+<div align="center">
+  <img src="https://img.shields.io/badge/Framework-BLIP-blue" alt="BLIP Framework" />
+  <img src="https://img.shields.io/badge/Built%20with-PyTorch-orange" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/License-MIT-green" alt="License" />
+</div>
 An advanced implementation of a **Visual Question Answering (VQA) model** powered by the **BLIP (Bootstrapped Language-Image Pre-training) framework**. This repository includes comprehensive data preprocessing pipelines, model training workflows, rigorous evaluation protocols, and seamless deployment options via Flask API and Streamlit UI.
 
 ## 📑 Table of Contents
