@@ -16,7 +16,7 @@ https://github.com/user-attachments/assets/291d6921-2b6f-4eb1-919a-093e32c6d0ec
     
 
 
-## 🖥️ Frontend Implementation
+## 🖥️ Frontend Implementation (⚠️ Under Maintenance)
 
 The project's frontend is maintained in a separate repository by [OoONANCY](https://github.com/OoONANCY) and [ANSHIKA1220](https://github.com/ANSHIKA1220) for modular development and better maintenance. The frontend provides an intuitive user interface for interacting with both the VQA model and medical chatbot functionality.
 
