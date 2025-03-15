@@ -1,5 +1,5 @@
 # 🔍 Visual Question Answering (VQA) Model
-<div style="display: flex; justify-content;">
+<div style="display:justify-content;">
   <img src="https://github.com/user-attachments/assets/2d6bf915-cecf-4482-bde1-859eaf5fa399" height = "200" width="400">
   <img src="https://github.com/user-attachments/assets/5bbc3b17-cc18-4c50-89c0-3c092f786c53" height = "200" width="400">
   <img src="https://github.com/user-attachments/assets/e4413f47-5a16-4c00-a9e0-c96cbb690c5a" height = "200" width="300">
