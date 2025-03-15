@@ -1,6 +1,6 @@
 # 🔍 Visual Question Answering (VQA) Model
 
-> An advanced implementation of a **Visual Question Answering (VQA) model** powered by the **BLIP (Bootstrapped Language-Image Pre-training) framework**. This repository includes comprehensive data preprocessing pipelines, model training workflows, rigorous evaluation protocols, and seamless deployment options via Flask API and Streamlit UI.
+An advanced implementation of a **Visual Question Answering (VQA) model** powered by the **BLIP (Bootstrapped Language-Image Pre-training) framework**. This repository includes comprehensive data preprocessing pipelines, model training workflows, rigorous evaluation protocols, and seamless deployment options via Flask API and Streamlit UI.
 
 ## 📑 Table of Contents
 
