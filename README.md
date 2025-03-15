@@ -13,9 +13,6 @@
 
 https://github.com/user-attachments/assets/291d6921-2b6f-4eb1-919a-093e32c6d0ec
 
-    
-
-
 ## 🖥️ Frontend Implementation (⚠️ Under Maintenance)
 
 The project's frontend is maintained in a separate repository by [OoONANCY](https://github.com/OoONANCY) and [ANSHIKA1220](https://github.com/ANSHIKA1220) for modular development and better maintenance. The frontend provides an intuitive user interface for interacting with both the VQA model and medical chatbot functionality.
@@ -377,7 +374,6 @@ pip install -r requirements.txt
 ### ✨ Future Work
 
 - 🔬 Experiment with different model architectures
-- ⚙️ Optimize hyperparameters using Bayesian optimization
 - 📊 Add visualization tools for better model interpretation
 - 🌐 Expand language support for multilingual VQA
 - 🔄 Implement continuous learning capabilities
