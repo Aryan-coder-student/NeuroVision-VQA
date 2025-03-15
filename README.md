@@ -48,8 +48,11 @@ npm start
 
 3. Ensure the Flask API is running at the expected endpoint (default: http://localhost:5000)
 
-## 📑 Table of Contents
+Here’s your updated **Table of Contents** with a dataset download script added:  
 
+---
+
+## 📑 Table of Contents
 - [Project Overview](#-project-overview)
 - [Project Structure](#-project-structure)
 - [Core Components](#-core-components)
@@ -59,9 +62,23 @@ npm start
 - [API Documentation](#-api-documentation)
 - [DVC Pipeline](#-dvc-pipeline)
 - [Installation](#-installation)
+- [Dataset Download](#-dataset-download)
 - [Results & Future Improvements](#-results--future-improvements)
 
-## 🔭 Project Overview
+---
+
+## 📥 Dataset Download  
+The VQA-RAD dataset is available on Hugging Face: [flaviagiammarino/vqa-rad](https://huggingface.co/datasets/flaviagiammarino/vqa-rad).  
+To download the **VQA-RAD** dataset from Hugging Face and store it in `data/bronze/`, run the following script:  
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset("flaviagiammarino/vqa-rad")
+dataset.save_to_disk("data/bronze/")
+```
+
+This ensures that your dataset is properly downloaded and stored in the `bronze` data layer. 🚀
 
 This VQA model enables machines to understand and answer natural language questions about images. Leveraging the BLIP framework, it achieves high accuracy in interpreting visual content and generating relevant textual responses. The system is enhanced with a LangChain-powered agent for handling medical queries beyond image analysis.
 
