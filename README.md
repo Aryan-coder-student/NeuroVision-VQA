@@ -53,7 +53,7 @@ Here’s your updated **Table of Contents** with a dataset download script added
 ---
 
 ## 📑 Table of Contents
-- [Project Overview](#-project-overview)
+- [Dataset Download](#-dataset-download)
 - [Project Structure](#-project-structure)
 - [Core Components](#-core-components)
 - [API Architecture](#-api-architecture)
