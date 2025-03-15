@@ -1,8 +1,9 @@
 # 🔍 Visual Question Answering (VQA) Model
-![image](https://github.com/user-attachments/assets/e4413f47-5a16-4c00-a9e0-c96cbb690c5a)
-![image](https://github.com/user-attachments/assets/2d6bf915-cecf-4482-bde1-859eaf5fa399)
-![image](https://github.com/user-attachments/assets/5bbc3b17-cc18-4c50-89c0-3c092f786c53)
-re size it make it in one row
+<div style="display: flex; justify-content: space-around;">
+  <img src="https://github.com/user-attachments/assets/e4413f47-5a16-4c00-a9e0-c96cbb690c5a" width="300">
+  <img src="https://github.com/user-attachments/assets/2d6bf915-cecf-4482-bde1-859eaf5fa399" width="300">
+  <img src="https://github.com/user-attachments/assets/5bbc3b17-cc18-4c50-89c0-3c092f786c53" width="300">
+</div>
 An advanced implementation of a **Visual Question Answering (VQA) model** powered by the **BLIP (Bootstrapped Language-Image Pre-training) framework**. This repository includes comprehensive data preprocessing pipelines, model training workflows, rigorous evaluation protocols, and seamless deployment options via Flask API and Streamlit UI.
 
 ## 📑 Table of Contents
