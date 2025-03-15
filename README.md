@@ -7,12 +7,12 @@
   <img src="https://img.shields.io/badge/Deployment-Docker-lightblue" alt="Docker" />
   <img src="https://img.shields.io/badge/Agent-LangChain-purple" alt="LangChain" />
 </div>
-
-
-https://github.com/user-attachments/assets/291d6921-2b6f-4eb1-919a-093e32c6d0ec
 <div style="display:justify-content;">
   <img src="https://github.com/user-attachments/assets/2d6bf915-cecf-4482-bde1-859eaf5fa399" height="250" width="400">
 </div>
+
+https://github.com/user-attachments/assets/291d6921-2b6f-4eb1-919a-093e32c6d0ec
+
     
 
 
