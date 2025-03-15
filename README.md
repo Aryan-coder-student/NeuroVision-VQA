@@ -1,17 +1,26 @@
-# 🔍 Visual Question Answering (VQA) Model
-An advanced implementation of a **Visual Question Answering (VQA) model** powered by the **BLIP (Bootstrapped Language-Image Pre-training) framework**. This repository includes comprehensive data preprocessing pipelines, model training workflows, rigorous evaluation protocols, and seamless deployment options via Flask API and Streamlit UI.
-<div style="display:justify-content;">
-  <img src="https://github.com/user-attachments/assets/2d6bf915-cecf-4482-bde1-859eaf5fa399" height = "250" width="400">
-  <img src="https://github.com/user-attachments/assets/5bbc3b17-cc18-4c50-89c0-3c092f786c53" height = "250" width="400">
-  <img src="https://github.com/user-attachments/assets/e4413f47-5a16-4c00-a9e0-c96cbb690c5a">
+# Visual Question Answering (VQA) System
+
+<div align="center">
+  <img src="https://img.shields.io/badge/Framework-BLIP-blue" alt="BLIP Framework" />
+  <img src="https://img.shields.io/badge/Built%20with-PyTorch-orange" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/Pipeline-DVC-green" alt="DVC Pipeline" />
+  <img src="https://img.shields.io/badge/Deployment-Docker-lightblue" alt="Docker" />
+  <img src="https://img.shields.io/badge/Agent-LangChain-purple" alt="LangChain" />
 </div>
 
+<div style="display:justify-content;">
+  <img src="https://github.com/user-attachments/assets/2d6bf915-cecf-4482-bde1-859eaf5fa399" height="250" width="400">
+  <img src="https://github.com/user-attachments/assets/5bbc3b17-cc18-4c50-89c0-3c092f786c53" height="250" width="400">
+  <img src="https://github.com/user-attachments/assets/e4413f47-5a16-4c00-a9e0-c96cbb690c5a">
+</div>
 
 ## 📑 Table of Contents
 
 - [Project Overview](#-project-overview)
 - [Project Structure](#-project-structure)
 - [Core Components](#-core-components)
+- [API Architecture](#-api-architecture)
+- [LangChain Agent System](#-langchain-agent-system)
 - [Docker Setup](#-docker-setup)
 - [API Documentation](#-api-documentation)
 - [DVC Pipeline](#-dvc-pipeline)
@@ -20,7 +29,7 @@ An advanced implementation of a **Visual Question Answering (VQA) model** powere
 
 ## 🔭 Project Overview
 
-This VQA model enables machines to understand and answer natural language questions about images. Leveraging the BLIP framework, it achieves high accuracy in interpreting visual content and generating relevant textual responses.
+This VQA model enables machines to understand and answer natural language questions about images. Leveraging the BLIP framework, it achieves high accuracy in interpreting visual content and generating relevant textual responses. The system is enhanced with a LangChain-powered agent for handling medical queries beyond image analysis.
 
 ## 📁 Project Structure
 
@@ -102,6 +111,59 @@ VQA/
 - 🔄 Uses the BLIP processor to encode images and questions
 - 📤 Saves the processed data as **pickle files** in `data/silver/`
 
+## 🌐 API Architecture
+
+### `app.py` - Flask API Implementation
+
+The Flask API serves as the backbone of our deployment strategy, offering two primary endpoints:
+
+1. **Image Question Answering (`/predict/`)**
+   - Receives an image file and a question
+   - Processes the image using the BLIP processor
+   - Passes the processed inputs to the fine-tuned model
+   - Returns the generated answer as a JSON response
+
+2. **Medical Chatbot (`/chat/`)**
+   - Accepts a text query related to medical topics
+   - Forwards the query to a LangChain-powered agent
+   - Returns comprehensive medical information from multiple sources
+
+**Key Components:**
+- **CORS Support**: Enables cross-origin requests for frontend integration
+- **Environment Variables**: Securely loads API keys for external services
+- **GPU/CPU Detection**: Automatically selects the appropriate device for model inference
+- **Error Handling**: Implements robust exception handling for all endpoints
+
+## 🤖 LangChain Agent System
+
+Our system employs a sophisticated LangChain agent architecture to handle medical queries beyond image analysis:
+
+### Agent Components
+
+1. **Search Tools**
+   - **Medical Web Search**: Utilizes SerpAPI to search the web for medical information related to brain, CT, and MRI scans
+   - **PubMed Search**: Connects to PubMed API for accessing peer-reviewed medical research papers
+
+2. **LLM Backend**
+   - Powered by Groq's **Gemma2-9b-it** model for generating coherent and accurate responses
+   - Configured for medical domain specialization
+
+3. **Memory System**
+   - Implements `ConversationBufferMemory` to maintain context across multiple queries
+   - Enables follow-up questions and contextual understanding
+
+4. **Agent Configuration**
+   - Uses `ZERO_SHOT_REACT_DESCRIPTION` agent type for reasoning capabilities
+   - Limited to 10 iterations to ensure timely responses
+   - Includes error handling for parsing issues
+
+5. **Flow Process**
+   - Receives user query via the `/chat/` endpoint
+   - Agent analyzes the query and determines which tools to use
+   - Searches appropriate sources (web or PubMed)
+   - Synthesizes information into a comprehensive response
+   - Returns formatted answer to the user
+
 ## 🐳 Docker Setup
 
 ### `Dockerfile`
@@ -141,6 +203,13 @@ curl -X POST "http://127.0.0.1:5000/predict/" \
   -F "question=What is in the image?"
 ```
 
+**Response:**
+```json
+{
+  "answer": "The image shows a brain MRI scan with a visible tumor in the temporal lobe"
+}
+```
+
 ### Chatbot Query Endpoint
 
 ```bash
@@ -148,6 +217,13 @@ curl -X POST "http://127.0.0.1:5000/predict/" \
 curl -X POST "http://127.0.0.1:5000/chat/" \
   -H "Content-Type: application/json" \
   -d '{"query": "What is Astrocytoma?"}'
+```
+
+**Response:**
+```json
+{
+  "response": "Astrocytoma is a type of brain tumor that develops from star-shaped cells called astrocytes. These cells are part of the glial tissue, which supports and protects neurons in the brain and spinal cord. Astrocytomas can range from slow-growing (low-grade) to aggressive (high-grade) tumors. They are classified by the World Health Organization (WHO) into four grades (I-IV), with grade IV being the most aggressive form, also known as glioblastoma multiforme. Symptoms may include headaches, seizures, memory problems, and changes in behavior, depending on the tumor's location and size. Treatment typically involves surgery, radiation therapy, and chemotherapy, depending on the grade and location of the tumor."
+}
 ```
 
 ### API Testing (`test_api.py`)
@@ -252,6 +328,8 @@ pip install -r requirements.txt
 - 📊 Add visualization tools for better model interpretation
 - 🌐 Expand language support for multilingual VQA
 - 🔄 Implement continuous learning capabilities
+- 🧠 Enhance the LangChain agent with more specialized medical tools
+- 🔍 Add image segmentation capabilities for more detailed medical image analysis
 
 ---
 
@@ -261,4 +339,5 @@ pip install -r requirements.txt
 <div align="center">
   <img src="https://img.shields.io/badge/Framework-BLIP-blue" alt="BLIP Framework" />
   <img src="https://img.shields.io/badge/Built%20with-PyTorch-orange" alt="PyTorch" />
+  <img src="https://img.shields.io/badge/Agent-LangChain-purple" alt="LangChain" />
 </div>
